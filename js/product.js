@@ -2,193 +2,165 @@ const products = [
     {
         id: 0,
         cat: "electronic",
-        title: "GoPro 4K Action",
-        price: "790",
+        title: "Smart TV 55'' 4K Ultra HD",
+        price: "999",
         color: "Black",
         image: './img/blue bag.jpg',
-        date: 20 / 4 / 2024
+        deal: "Hot Deal",
+        date: "New"
     },
     {
         id: 1,
-        cat: "electronic",
-        title: "Iphone 14",
-        price: "900",
-        color: "Black",
+        cat: "clothing",
+        title: "Men's Casual Jacket",
+        price: "80",
+        color: "Navy Blue",
         image: './img/iphone12.jpg',
-        date: 10 / 4 / 2024
+        deal: "",
+        date: "Average"
     },
     {
         id: 2,
         cat: "furniture",
-        title: "Sofa for living room",
-        price: "500",
-        color: "Brown",
+        title: "Modern Coffee Table",
+        price: "350",
+        color: "White",
         image: './img/watch.jpg',
-        date: 18 / 4 / 2024
+        deal: "Hot Deal",
+        date: "New"
     },
     {
         id: 3,
-        cat: "clothing",
-        title: "Unisex Bag",
-        price: "20",
-        color: "Blue",
+        cat: "electronic",
+        title: "Wireless Bluetooth Earbuds",
+        price: "50",
+        color: "Red",
         image: './img/Xiaomi.jpg',
-        date: 17 / 4 / 2024
+        deal: "",
+        date: "Average"
     },
     {
         id: 4,
-        cat: "electronic",
-        title: "GoPro HERO6 4K Action",
-        price: "790",
-        color: "Black",
-        image: '',
-        date: 2 / 4 / 2024
+        cat: "clothing",
+        title: "Women's Running Shoes",
+        price: "60",
+        color: "Pink",
+        image: './img/headset.jpg',
+        deal: "Hot Deal",
+        date: "New"
     },
     {
         id: 5,
         cat: "electronic",
-        title: "Canon camera 20x zoom EOS 2000",
-        price: "600",
+        title: "Portable Power Bank 20000mAh",
+        price: "30",
         color: "Black",
-        image: '',
-        date: 22 / 3 / 2024
+        image: './img/gopro.jpg',
+        deal: "",
+        date: "Average"
     },
     {
         id: 6,
-        cat: "electronic",
-        title: "Xiaomi Redmi 8 Original Global Version 4GB",
-        price: "250",
-        color: ["Blue", "Black"],
-        image: '',
-        date: 22 / 3 / 2024
+        cat: "furniture",
+        title: "Rustic Wooden Bookshelf",
+        price: "200",
+        color: "Brown",
+        image: './img/Xiaomi.jpg',
+        deal: "Hot Deal",
+        date: "New"
     },
     {
         id: 7,
         cat: "electronic",
-        title: "Apple iPhone 12 Pro 6.1 RAM 6GB 512GB Unlocked",
-        price: "800",
-        color: "Grey",
-        image: "https://www.apple",
-        date: 18 / 3 / 2024
+        title: "Wireless Gaming Mouse",
+        price: "70",
+        color: "RGB",
+        image: "./img/headset.jpg",
+        deal: "",
+        date: "Average"
     },
     {
         id: 8,
-        cat: "electronic",
-        title: "Apple Watch Series 1 Sport Case 38mm Black",
-        price: "120",
-        color: "Black",
-        image: '',
-        date: 15 / 3 / 2024
+        cat: "clothing",
+        title: "Women's Yoga Pants",
+        price: "25",
+        color: "Purple",
+        image: './img/gopro.jpg',
+        deal: "Hot Deal",
+        date: "New"
     },
     {
         id: 9,
-        cat: "clothing",
-        title: "",
-        price: "",
-        color: "",
-        image: '',
-        date: 12 / 3 / 2024
+        cat: "furniture",
+        title: "Adjustable Standing Desk",
+        price: "400",
+        color: "Black",
+        image: './img/blue bag.jpg',
+        deal: "",
+        date: "Average"
     },
     {
         id: 10,
         cat: "clothing",
-        title: "",
-        price: "",
-        color: "",
-        image: '',
-        date: 16 / 4 / 2024
+        title: "Men's Graphic T-Shirt",
+        price: "15",
+        color: "Grey",
+        image: './img/watch.jpg',
+        deal: "Hot Deal",
+        date: "New"
     },
     {
         id: 11,
-        cat: "clothing",
-        title: "",
-        price: "",
-        color: "",
-        image: '',
-        date: 15 / 3 / 2024
+        cat: "electronic",
+        title: "Wireless Charging Pad",
+        price: "20",
+        color: "White",
+        image: './img/iphone12.jpg',
+        deal: "",
+        date: "Average"
     },
     {
         id: 12,
         cat: "furniture",
-        title: "",
-        price: "",
-        color: "",
-        image: '',
-        date: 15 / 3 / 2024
+        title: "Velvet Accent Chair",
+        price: "180",
+        color: "Burgundy",
+        image: './img/camera.jpg',
+        deal: "Hot Deal",
+        date: "New"
     },
     {
         id: 13,
-        cat: "",
-        title: "",
-        price: "",
-        color: "",
-        image: '',
-        date: 15 / 3 / 2024
+        cat: "electronic",
+        title: "Noise Cancelling Headphones",
+        price: "150",
+        color: "Silver",
+        image: './img/headset.jpg',
+        deal: "",
+        date: "Average"
     },
     {
         id: 14,
-        cat: "",
-        title: "",
-        price: "",
-        color: "",
-        image: '',
-        date: 15 / 3 / 2024
+        cat: "clothing",
+        title: "Women's Denim Shorts",
+        price: "35",
+        color: "Light Blue",
+        image: './img/blue bag.jpg',
+        deal: "Hot Deal",
+        date: "New"
     },
     {
         id: 15,
-        cat: "",
-        title: "",
-        price: "",
-        color: "",
-        image: '',
-        date: 15 / 3 / 2024
-    },
-    {
-        id: 16,
-        cat: "",
-        title: "",
-        price: "",
-        color: "",
-        image: '',
-        date: 15 / 3 / 2024
-    },
-    {
-        id: 17,
-        cat: "",
-        title: "",
-        price: "",
-        color: "",
-        image: '',
-        date: 15 / 3 / 2024
-    },
-    {
-        id: 18,
-        cat: "",
-        title: "",
-        price: "",
-        color: "",
-        image: '',
-        date: 15 / 3 / 2024
-    },
-    {
-        id: 19,
-        cat: "",
-        title: "",
-        price: "",
-        color: "",
-        image: '',
-        date: 15 / 3 / 2024
-    },
-    {
-        id: 20,
-        cat: "",
-        title: "",
-        price: "",
-        color: "",
-        image: '',
-        date: 15 / 3 / 2024
+        cat: "furniture",
+        title: "Mid-Century Modern Sofa",
+        price: "700",
+        color: "Grey",
+        image: './img/camera.jpg',
+        deal: "",
+        date: "Average"
     },
 ];
+
 
 // Get a reference to the product container
 const productContainer = document.getElementById("product-container");
@@ -208,14 +180,14 @@ function renderProducts() {
             <div class="card" id="card-width">
                 <img src="${product.image}" alt="${product.title}" class="img" width="100%" height="240px">
                 <div class="card-body">
-                    <h3 class="card-subtitle mb-2 text-muted">${product.title}</h3>
-                    <p class="card-title">Price: $${product.price}</p>
+                    <h3 class="card-subtitle mb-2 text-muted" style="font-size: 20px;">${product.title}</h3>
+                    <p class="card-title">$${product.price}</p>
                     <p class="card-subtitle mb-2 text-muted">Color: ${product.color}</p>
-                    <a role="button" id="cart-button-${product.id}" class="btn btn-primary card-link py-2 px-4" onclick="handleCartAction(${product.id})">
+                    <a role="button" id="cart-button-${product.id}" class="btn card-link py-2 px-4 btncart" onclick="handleCartAction(${product.id})" >
                         <span id="cart-button-text-${product.id}">${isProductInCart(product.id) ? 'Remove from Cart' : 'Add to Cart'}</span>
                     </a>                    
-                    <a title="Add to wishlist" id="wishlist-button-${product.id}" class="btn btn-outline-primary card-link like" onclick="handleWishlistAction(${product.id})"> 
-                    <i class="fa-solid fa-heart"></i></a>
+                    <a title="Add to wishlist" id="wishlist-button-${product.id}" class="btn card-link btnlike" onclick="handleWishlistAction(${product.id}) style="border: none;"> 
+                    <i class="fa-solid fa-heart fsolid"></i></a>
                 </div>
             </div>
             

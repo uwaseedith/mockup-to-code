@@ -91,8 +91,8 @@ function renderWishlistProducts() {
                         <p class="card-title">Price: $${product.price}</p>
                         <p class="card-subtitle mb-2 text-muted">Color: ${product.color}</p>
                         <a role="button" id="cart-button-${product.id}" class="btn btn-primary card-link py-2 px-4" onclick="handleCartAction(${product.id})">Remove From Cart</a>
-                        <a title="Add to wishlist" id="wishlist-button-${product.id}" class="btn btn-outline-primary card-link" onclick="handleWishlistAction(${product.id})"> 
-                        <i class="fa-solid fa-heart"></i></a>
+                        <a title="Add to wishlist" id="wishlist-button-${product.id}" class="btn btn-outline-primary card-link btnlike" onclick="handleWishlistAction(${product.id})"> 
+                        <i class="fa-solid fa-heart fsolid"></i></a>
                     </div>
                 </div>
             </div>`;

@@ -91,7 +91,7 @@ function renderCartProducts() {
                         <h3 class="card-subtitle mb-2 text-muted">${product.title}</h3>
                         <p class="card-title">Price: $${product.price}</p>
                         <p class="card-subtitle mb-2 text-muted">Color: ${product.color}</p>
-                        <a href="#" role="button" id="cart-button-${product.id}" class="btn btn-primary card-link py-2 px-4" onclick="handleCartAction(${product.id})">Remove From Cart</a>
+                        <a href="#" role="button" id="cart-button-${product.id}" class="btn card-link py-2 px-4 btnlike" onclick="handleCartAction(${product.id})">Remove From Cart</a>
                     </div>
                 </div>
             </div>`;

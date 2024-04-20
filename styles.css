@@ -35,11 +35,31 @@
     gap: 30px;
 }
 
+.fsolid {
+    color: #ff8100;
+}
 
+.btnlike {
+    border: 1px solid #ff8100 !important;
+}
 
+.btnlike:hover{
+    background-color: #ff8100 !important;
+    opacity: 0.8;
+}
 
+.btnlike:hover .fa-heart {
+    color: white;
+}
 
+.btncart {
+    background-color: #ff8100 !important;
+    border: none;
+}
 
+.btncart:hover{
+    opacity: 0.8;
+}
 
 @media (max-width: 768.98px) {
     #input-form {
@@ -153,3 +173,4 @@
     
     
   }
+
