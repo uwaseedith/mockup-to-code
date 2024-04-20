@@ -56,9 +56,13 @@
         </button>
 
         <div class="ms-md-5 mt-2 mt-md-0">
-          <a type="button" class="btn btn-outline-primary fw-500 rounded">
-            <i class="fa-solid fa-user me-lg-2"></i>
-            <p class="d-none d-lg-inline">Sign in</p>
+          <a
+            type="button"
+            class="btn btn-outline-primary fw-500 rounded"
+            href="/index.html"
+          >
+            <i class="fa-solid fa-home me-lg-2"></i>
+            <p class="d-none d-lg-inline">Home</p>
           </a>
           <a
             type="button"
@@ -110,14 +114,20 @@
       <!--row and container div--->
     </div>
 
-<!-- Checkout details -->
-<div id="checkout-details" class="py-5">
-  <div class="container">
-    <div id="checkout-items"></div>
-    <div id="notification-total" class="border border-primary rounded text-primary mt-3" style="display: none;"></div>
-    <button class="border border-primary text-primary mt-3 checkout">Check Total</button>
-  </div>
-</div>
+    <!-- Checkout details -->
+    <div id="checkout-details" class="py-5">
+      <div class="container">
+        <div id="checkout-items"></div>
+        <div
+          id="notification-total"
+          class="border border-primary rounded text-primary mt-3"
+          style="display: none"
+        ></div>
+        <button class="border border-primary text-primary mt-3 checkout">
+          Check Total
+        </button>
+      </div>
+    </div>
 
     <!-- Footer -->
 
@@ -189,56 +199,58 @@
       id="notification"
       style="display: none"
       class="notification border border-primary rounded text-primary checkoutnotif"
-    >
-  </div>
-    
+    ></div>
+
     <script src="js/product.js"></script>
     <script src="js/cart.js"></script>
     <script>
-     // Define function to calculate total cost
-function calculateTotalCost(cart) {
-    let totalCost = 0;
-    cart.forEach(product => {
-        // Convert price to number before adding to totalCost
-        totalCost += parseFloat(product.price);
-    });
-    return totalCost;
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-    const checkoutButton = document.querySelector(".checkout");
-    const notification = document.getElementById("notification");
-    const productContainer = document.getElementById("product-container");
-
-    // Function to update total cost
-    function updateTotalCost() {
+      // Define function to calculate total cost
+      function calculateTotalCost(cart) {
         let totalCost = 0;
-        const productItems = document.querySelectorAll(".product-item");
-        productItems.forEach(item => {
+        cart.forEach((product) => {
+          // Convert price to number before adding to totalCost
+          totalCost += parseFloat(product.price);
+        });
+        return totalCost;
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const checkoutButton = document.querySelector(".checkout");
+        const notification = document.getElementById("notification");
+        const productContainer = document.getElementById("product-container");
+
+        // Function to update total cost
+        function updateTotalCost() {
+          let totalCost = 0;
+          const productItems = document.querySelectorAll(".product-item");
+          productItems.forEach((item) => {
             const price = parseFloat(item.dataset.price);
             const quantity = parseInt(item.querySelector(".quantity").value);
             totalCost += price * quantity;
-        });
-        notification.innerText = "Total Cost: $" + totalCost.toFixed(2) + "\nPlease Contact the Seller on +250 790 000 001";
-    }
-
-    // Event listener for quantity change
-    productContainer.addEventListener("change", function (event) {
-        if (event.target.classList.contains("quantity")) {
-            updateTotalCost();
+          });
+          notification.innerText =
+            "Total Cost: $" +
+            totalCost.toFixed(2) +
+            "\nPlease Contact the Seller on +250 790 000 001";
         }
-    });
 
-    // Event listener for checkout button click
-    checkoutButton.addEventListener("click", function () {
-        // Retrieve cart data from local storage
-        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        // Event listener for quantity change
+        productContainer.addEventListener("change", function (event) {
+          if (event.target.classList.contains("quantity")) {
+            updateTotalCost();
+          }
+        });
 
-        // Clear previous product items
-        productContainer.innerHTML = "";
+        // Event listener for checkout button click
+        checkoutButton.addEventListener("click", function () {
+          // Retrieve cart data from local storage
+          const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-        // Display each product in the cart
-        cart.forEach(product => {
+          // Clear previous product items
+          productContainer.innerHTML = "";
+
+          // Display each product in the cart
+          cart.forEach((product) => {
             const productItem = document.createElement("div");
             productItem.classList.add("product-item");
             productItem.dataset.price = parseFloat(product.price);
@@ -246,20 +258,23 @@ document.addEventListener("DOMContentLoaded", function () {
             productItem.innerHTML = `
                 <p>${product.title} - $${product.price}</p>
                 <select class="form-select quantity">
-                    ${Array.from({ length: 10 }, (_, i) => `<option value="${i + 1}">${i + 1}</option>`).join("")}
+                    ${Array.from(
+                      { length: 10 },
+                      (_, i) => `<option value="${i + 1}">${i + 1}</option>`
+                    ).join("")}
                 </select>
             `;
 
             productContainer.appendChild(productItem);
+          });
+
+          // Update total cost initially
+          updateTotalCost();
+
+          // Display notification
+          notification.style.display = "block";
         });
-
-        // Update total cost initially
-        updateTotalCost();
-
-        // Display notification
-        notification.style.display = "block";
-    });
-});
+      });
     </script>
   </body>
 </html>
