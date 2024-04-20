@@ -85,7 +85,7 @@
 /* notification */
 
 .notification {
-    border: solid 1px white;
+    background-color: white;
     border-radius: 20px;
     padding: 10px 20px;
     max-width: fit-content;
@@ -98,9 +98,9 @@
     transform: translateX(-50%);
     z-index: 1000;
     text-align: center;
-    color: white;
+    color: blue;
     font-weight: bold;
-    opacity: 0.9;
+    opacity: 0.95;
 }
 
 /* */
