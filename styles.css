@@ -85,14 +85,21 @@
 /* notification */
 
 .notification {
-    display: flex;
-    border: solid 1px #ff8100;
+    border: solid 1px white;
     border-radius: 20px;
     padding: 10px 20px;
     max-width: fit-content;
     margin-bottom: 10px;
     font-size: 14px;
     justify-self: center;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    text-align: center;
+    color: white;
+    font-weight: bold;
 }
 
 /* */
