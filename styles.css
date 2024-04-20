@@ -109,18 +109,17 @@
     background-color: white;
     border-radius: 20px;
     padding: 10px 20px;
-    width: max-content ;
+    width: 100% ;
     margin-bottom: 10px;
+    left: 50%;
     font-size: 14px;
     justify-self: center;
-    position: fixed;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
+    align-items: center;
     z-index: 1000;
     text-align: center;
     font-weight: bold;
-    opacity: 1;
+    justify-content: center;
+    display: flex;
 }
 
 .checkout:hover {
@@ -132,3 +131,25 @@
 .checkoutnotif {
  top: 50%;
 }
+
+/* Footer */
+
+.footer-container {
+    background-color: #ffffff; /* White background */
+    position: relative; /* Positioning context for mountains */
+    overflow: hidden; /* Hide overflowing mountain shapes */
+    z-index: 1;
+  }
+  
+  /* Mountain shape */
+  .mountain {
+    position: absolute; /* Position mountains relative to footer */
+    bottom: 0; /* Align mountains to bottom of footer */
+    left: 0; /* Align mountains to left of footer */
+    width: 100%; /* Full width */
+    height: 200px; /* Height of mountain shapes */
+    background-color: #ff8100; /* Mountain color */
+    clip-path: polygon(0 100%, 100% 0, 100% 100%); /* Create triangular shape */
+    
+    
+  }
