@@ -3,7 +3,7 @@ const products = [
         id: 0,
         cat: "electronic",
         title: "GoPro 4K Action",
-        price: "790.50",
+        price: "790",
         color: "Black",
         image: './img/blue bag.jpg',
         date: 20 / 4 / 2024
@@ -39,7 +39,7 @@ const products = [
         id: 4,
         cat: "electronic",
         title: "GoPro HERO6 4K Action",
-        price: "790.50",
+        price: "790",
         color: "Black",
         image: '',
         date: 2 / 4 / 2024

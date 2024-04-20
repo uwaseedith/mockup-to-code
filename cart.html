@@ -177,7 +177,48 @@
       </div>
     </div>
 
+    <!-- Notification for total cost -->
+    <div
+      id="notification"
+      style="display: none"
+      class="notification border border-primary rounded text-primary"
+    ></div>
+
+    <button class="border border-primary text-primary checkout">
+      Checkout
+    </button>
+
     <script src="js/product.js"></script>
     <script src="js/cart.js"></script>
+    <script>
+      // Define a function to calculate total cost
+      function calculateTotalCost() {
+        // Select all product items in the cart
+        const productItems = document.querySelectorAll(".product-item");
+
+        // Initialize total cost variable
+        let totalCost = 0;
+
+        // Loop through each product item
+        productItems.forEach(function (item) {
+          // Get the price of the product
+          const priceText = item.querySelector(".price").textContent.trim(); // Get the text content and remove leading/trailing spaces
+          const price = parseFloat(priceText.slice(1)); // Remove the "$" symbol and parse the remaining string as a float
+          // Add price to the total cost
+          totalCost += price;
+        });
+
+        // Display the total cost in a notification
+        const notification = document.getElementById("notification");
+        notification.style.display = "block";
+        notification.innerText = `Total Cost: $${totalCost.toFixed(2)}`;
+      }
+
+      // Select the checkout button
+      const checkoutButton = document.querySelector(".checkout");
+
+      // Add event listener to the checkout button
+      checkoutButton.addEventListener("click", calculateTotalCost);
+    </script>
   </body>
 </html>

@@ -103,4 +103,28 @@
     opacity: 0.95;
 }
 
-/* */
+/*checkout */
+
+.checkout {
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px 20px;
+    width: max-content ;
+    margin-bottom: 10px;
+    font-size: 14px;
+    justify-self: center;
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    text-align: center;
+    font-weight: bold;
+    opacity: 1;
+}
+
+.checkout:hover {
+    border: 1px solid white;
+    background-color: rgb(35, 94, 242);
+    color: white !important;
+}
