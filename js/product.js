@@ -6,7 +6,7 @@ const products = [
         price: "790.50",
         color: "Black",
         image: './img/blue bag.jpg',
-        date: 20/4/2024
+        date: 20 / 4 / 2024
     },
     {
         id: 1,
@@ -15,7 +15,7 @@ const products = [
         price: "900",
         color: "Black",
         image: './img/iphone12.jpg',
-        date: 10/4/2024
+        date: 10 / 4 / 2024
     },
     {
         id: 2,
@@ -24,7 +24,7 @@ const products = [
         price: "500",
         color: "Brown",
         image: './img/watch.jpg',
-        date: 18/4/2024
+        date: 18 / 4 / 2024
     },
     {
         id: 3,
@@ -33,7 +33,7 @@ const products = [
         price: "20",
         color: "Blue",
         image: './img/Xiaomi.jpg',
-        date: 17/4/2024
+        date: 17 / 4 / 2024
     },
     {
         id: 4,
@@ -42,7 +42,7 @@ const products = [
         price: "790.50",
         color: "Black",
         image: '',
-        date: 2/4/2024
+        date: 2 / 4 / 2024
     },
     {
         id: 5,
@@ -51,7 +51,7 @@ const products = [
         price: "600",
         color: "Black",
         image: '',
-        date: 22/3/2024
+        date: 22 / 3 / 2024
     },
     {
         id: 6,
@@ -60,7 +60,7 @@ const products = [
         price: "250",
         color: ["Blue", "Black"],
         image: '',
-        date: 22/3/2024
+        date: 22 / 3 / 2024
     },
     {
         id: 7,
@@ -69,7 +69,7 @@ const products = [
         price: "800",
         color: "Grey",
         image: "https://www.apple",
-        date: 18/3/2024
+        date: 18 / 3 / 2024
     },
     {
         id: 8,
@@ -78,7 +78,7 @@ const products = [
         price: "120",
         color: "Black",
         image: '',
-        date: 15/3/2024
+        date: 15 / 3 / 2024
     },
     {
         id: 9,
@@ -87,7 +87,7 @@ const products = [
         price: "",
         color: "",
         image: '',
-        date: 12/3/2024
+        date: 12 / 3 / 2024
     },
     {
         id: 10,
@@ -96,7 +96,7 @@ const products = [
         price: "",
         color: "",
         image: '',
-        date: 16/4/2024
+        date: 16 / 4 / 2024
     },
     {
         id: 11,
@@ -105,7 +105,7 @@ const products = [
         price: "",
         color: "",
         image: '',
-        date: 15/3/2024
+        date: 15 / 3 / 2024
     },
     {
         id: 12,
@@ -114,7 +114,7 @@ const products = [
         price: "",
         color: "",
         image: '',
-        date: 15/3/2024
+        date: 15 / 3 / 2024
     },
     {
         id: 13,
@@ -123,7 +123,7 @@ const products = [
         price: "",
         color: "",
         image: '',
-        date: 15/3/2024
+        date: 15 / 3 / 2024
     },
     {
         id: 14,
@@ -132,7 +132,7 @@ const products = [
         price: "",
         color: "",
         image: '',
-        date: 15/3/2024
+        date: 15 / 3 / 2024
     },
     {
         id: 15,
@@ -141,7 +141,7 @@ const products = [
         price: "",
         color: "",
         image: '',
-        date: 15/3/2024
+        date: 15 / 3 / 2024
     },
     {
         id: 16,
@@ -150,7 +150,7 @@ const products = [
         price: "",
         color: "",
         image: '',
-        date: 15/3/2024
+        date: 15 / 3 / 2024
     },
     {
         id: 17,
@@ -159,7 +159,7 @@ const products = [
         price: "",
         color: "",
         image: '',
-        date: 15/3/2024
+        date: 15 / 3 / 2024
     },
     {
         id: 18,
@@ -168,7 +168,7 @@ const products = [
         price: "",
         color: "",
         image: '',
-        date: 15/3/2024
+        date: 15 / 3 / 2024
     },
     {
         id: 19,
@@ -177,7 +177,7 @@ const products = [
         price: "",
         color: "",
         image: '',
-        date: 15/3/2024
+        date: 15 / 3 / 2024
     },
     {
         id: 20,
@@ -186,7 +186,7 @@ const products = [
         price: "",
         color: "",
         image: '',
-        date: 15/3/2024
+        date: 15 / 3 / 2024
     },
 ];
 
@@ -229,3 +229,187 @@ function renderProducts() {
 
 // Call the renderProducts function to display products
 renderProducts();
+
+
+
+function isProductInCart(productId) {
+    // Get the cart data from localStorage
+    const cartData = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // Check if the product exists in the cart data
+    const productInCart = cartData.find(item => item.id === productId);
+
+    // Return true if the product is in the cart, otherwise return false
+    return productInCart ? true : false;
+}
+
+// Function to show notification
+function showNotificationCart(message) {
+    const notification = document.getElementById('notification');
+    notification.textContent = message;
+    notification.style.display = 'block';
+    setTimeout(() => {
+        notification.textContent = '';
+        notification.style.display = 'none';
+    }, 2000); // Hide notification after 3 seconds
+}
+
+
+// Function to handle adding/removing product from cart
+function handleCartAction(productId) {
+    // Get the product from the products array
+    const product = products.find(item => item.id === productId);
+
+    // Check if the product is already in the cart
+    const isProductInCart = function (productId) {
+        // Get the cart data from localStorage
+        const cartData = JSON.parse(localStorage.getItem('cart')) || [];
+
+        // Check if the product exists in the cart data
+        const productInCart = cartData.find(item => item.id === productId);
+
+        // Return true if the product is in the cart, otherwise return false
+        return productInCart ? true : false;
+    };
+
+    // Check if the product is already in the cart
+    const productAlreadyInCart = isProductInCart(productId);
+
+    // If the product is not in the cart, add it
+    if (!productAlreadyInCart) {
+        function addToCart(product) {
+            // Get the cart data from localStorage
+            const cartData = JSON.parse(localStorage.getItem('cart')) || [];
+
+            // Add the product to the cart data
+            cartData.push(product);
+
+            // Update the cart data in localStorage
+            localStorage.setItem('cart', JSON.stringify(cartData));
+
+            console.log(`Product "${product.title}" added to cart.`);
+            showNotificationCart(`Product "${product.title}" added to cart.`);
+        }
+        // Add product to cart
+        addToCart(product);
+        // Update button text to "Remove from Cart"
+        const cartButton = document.getElementById(`cart-button-${productId}`);
+        cartButton.textContent = "Remove from Cart";
+    } else {
+        function removeFromCart(productId) {
+            // Get the cart data from localStorage
+            const cartData = JSON.parse(localStorage.getItem('cart')) || [];
+
+            // Find the index of the product in the cart data
+            const index = cartData.findIndex(item => item.id === productId);
+
+            // If the product is found in the cart, remove it
+            if (index !== -1) {
+                cartData.splice(index, 1);
+
+                // Update the cart data in localStorage
+                localStorage.setItem('cart', JSON.stringify(cartData));
+                console.log('Product Removed from Cart')
+
+                showNotificationCart('Product removed from cart.');
+            }
+        }
+        // Remove product from cart
+        removeFromCart(productId);
+        // Update button text to "Add to Cart"
+        const cartButton = document.getElementById(`cart-button-${productId}`);
+        cartButton.textContent = "Add to Cart";
+    }
+}
+
+
+
+function isProductInWishlist(productId) {
+    const wishlistData = JSON.parse(localStorage.getItem('cart')) || [];
+    constproductInWishlist = wishlistData.find(item => item.id === productId);
+
+    return productInWishlist ? true : false;
+}
+
+
+function showNotification(message) {
+    const notificationWish = document.getElementById('wishlist-notification');
+    notificationWish.textContent = message;
+    notificationWish.style.display = 'block';
+    setTimeout(() => {
+        notificationWish.textContent = '';
+        notificationWish.style.display = 'none';
+    }, 2000); // Hide notification after 2 seconds
+}
+
+// Function to handle adding/removing product from wishlist
+function handleWishlistAction(productId) {
+    const product = products.find(item => item.id === productId);
+
+    //Check if the product is already liked
+    const isProductInWishlist = function (productId) {
+        //Get the wishlist data from localStorage
+        const wishlistData = JSON.parse(localStorage.getItem('wishlist')) || [];
+
+        //check if the product exists in the wishlist data
+        const isProductInWishlist = wishlistData.find(item => item.id == productId);
+
+        // Return true if the product is in the cart, otherwise return false
+        return isProductInWishlist ? true : false;
+    };
+
+    //check if the product is already in the cart
+    const productAlreadyInWishlist = isProductInWishlist(productId);
+
+    // If the product is not in the wishlist, add it
+
+    if (!productAlreadyInWishlist) {
+        function addToWishlist(product) {
+            //get the wishlist data from localStorage
+            const wishlistData = JSON.parse(localStorage.getItem('wishlist')) || [];
+
+            //Add the product to the wishlist data
+            wishlistData.push(product);
+
+            //Update the wishlist data in localStorage
+            localStorage.setItem("wishlist", JSON.stringify(wishlistData));
+
+            console.log(`Product "${product.title}" added to Wishlist`);
+            showNotification(`Product "${product.title}" added to Wishlist`);
+            // Change icon style
+            const wishlistButton = document.getElementById(`wishlist-button-${productId}`);
+            wishlistButton.classList.add('wishlist-added');
+        }
+
+        //Add product to wishlist
+        addToWishlist(product);
+        // update icon style 
+        //will do it later
+    } else {
+        function removeFromWishlist(productId) {
+            // Get the wishlist data from localStorage
+            const wishlistData = JSON.parse(localStorage.getItem('wishlist')) || [];
+
+            // Find the index of the product in the wishlist data
+            const index = wishlistData.findIndex(item => item.id == productId);
+
+            // If the product is found in the wishlist, remove it
+            if (index != -1) {
+                wishlistData.splice(index, 1);
+
+                // Update the wishlist  data in localStorage
+                localStorage.setItem('wishlist', JSON.stringify(wishlistData));
+                console.log('Product Removed from Wishlist');
+                // Remove icon style
+                const wishlistButton = document.getElementById(`wishlist-button-${productId}`);
+                wishlistButton.classList.remove('wishlist-added');
+
+                showNotification('Product removed from wishlist.');
+            }
+        }
+
+        // Remove product from wishlist
+        removeFromWishlist(product.id);
+
+    }
+}
