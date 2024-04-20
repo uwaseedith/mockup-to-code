@@ -85,7 +85,7 @@
         </ul>
       </div>
     </div>
-    <!--Container div!-->
+
     <hr />
 
     <!--  Cart Products section   -->
@@ -104,13 +104,20 @@
         >
           <!-- <div  class="row g-3 d-flex justify-content-evenly"> -->
 
-          <!-- Products will be dynamically added here -
-                
-                 <!--First Card--->
+          <!-- Products will be dynamically added here -->
         </div>
       </div>
       <!--row and container div--->
     </div>
+
+<!-- Checkout details -->
+<div id="checkout-details" class="py-5">
+  <div class="container">
+    <div id="checkout-items"></div>
+    <div id="notification-total" class="border border-primary rounded text-primary mt-3" style="display: none;"></div>
+    <button class="border border-primary text-primary mt-3 checkout">Check Total</button>
+  </div>
+</div>
 
     <!-- Footer -->
 
@@ -181,44 +188,78 @@
     <div
       id="notification"
       style="display: none"
-      class="notification border border-primary rounded text-primary"
-    ></div>
-
-    <button class="border border-primary text-primary checkout">
-      Checkout
-    </button>
-
+      class="notification border border-primary rounded text-primary checkoutnotif"
+    >
+  </div>
+    
     <script src="js/product.js"></script>
     <script src="js/cart.js"></script>
     <script>
-      // Define a function to calculate total cost
-      function calculateTotalCost() {
-        // Select all product items in the cart
-        const productItems = document.querySelectorAll(".product-item");
+     // Define function to calculate total cost
+function calculateTotalCost(cart) {
+    let totalCost = 0;
+    cart.forEach(product => {
+        // Convert price to number before adding to totalCost
+        totalCost += parseFloat(product.price);
+    });
+    return totalCost;
+}
 
-        // Initialize total cost variable
+document.addEventListener("DOMContentLoaded", function () {
+    const checkoutButton = document.querySelector(".checkout");
+    const notification = document.getElementById("notification");
+    const productContainer = document.getElementById("product-container");
+
+    // Function to update total cost
+    function updateTotalCost() {
         let totalCost = 0;
+        const productItems = document.querySelectorAll(".product-item");
+        productItems.forEach(item => {
+            const price = parseFloat(item.dataset.price);
+            const quantity = parseInt(item.querySelector(".quantity").value);
+            totalCost += price * quantity;
+        });
+        notification.innerText = "Total Cost: $" + totalCost.toFixed(2) + "\nPlease Contact the Seller on +250 790 000 001";
+    }
 
-        // Loop through each product item
-        productItems.forEach(function (item) {
-          // Get the price of the product
-          const priceText = item.querySelector(".price").textContent.trim(); // Get the text content and remove leading/trailing spaces
-          const price = parseFloat(priceText.slice(1)); // Remove the "$" symbol and parse the remaining string as a float
-          // Add price to the total cost
-          totalCost += price;
+    // Event listener for quantity change
+    productContainer.addEventListener("change", function (event) {
+        if (event.target.classList.contains("quantity")) {
+            updateTotalCost();
+        }
+    });
+
+    // Event listener for checkout button click
+    checkoutButton.addEventListener("click", function () {
+        // Retrieve cart data from local storage
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        // Clear previous product items
+        productContainer.innerHTML = "";
+
+        // Display each product in the cart
+        cart.forEach(product => {
+            const productItem = document.createElement("div");
+            productItem.classList.add("product-item");
+            productItem.dataset.price = parseFloat(product.price);
+
+            productItem.innerHTML = `
+                <p>${product.title} - $${product.price}</p>
+                <select class="form-select quantity">
+                    ${Array.from({ length: 10 }, (_, i) => `<option value="${i + 1}">${i + 1}</option>`).join("")}
+                </select>
+            `;
+
+            productContainer.appendChild(productItem);
         });
 
-        // Display the total cost in a notification
-        const notification = document.getElementById("notification");
+        // Update total cost initially
+        updateTotalCost();
+
+        // Display notification
         notification.style.display = "block";
-        notification.innerText = `Total Cost: $${totalCost.toFixed(2)}`;
-      }
-
-      // Select the checkout button
-      const checkoutButton = document.querySelector(".checkout");
-
-      // Add event listener to the checkout button
-      checkoutButton.addEventListener("click", calculateTotalCost);
+    });
+});
     </script>
   </body>
 </html>
