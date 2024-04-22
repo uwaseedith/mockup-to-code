@@ -43,16 +43,13 @@
           placeholder="Search"
           aria-label="Text input with dropdown button"
         />
-        <button
-          class="btn btn-outline-secondary dropdown-toggle"
-          type="button"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          All type
-        </button>
-        <button title="Search" class="btn btn-primary d-none d-lg-block">
-          <i class="fa-solid fa-magnifying-glass rounded d-none d-lg-block"></i>
+        <button title="Search" class="btn btn-primary d-lg-block">
+          <a href="#products" class="rounded d-lg-block"
+            ><i
+              class="fa-solid fa-magnifying-glass rounded d-lg-block"
+              style="color: white"
+            ></i
+          ></a>
         </button>
 
         <div class="ms-md-5 mt-2 mt-md-0">
@@ -81,12 +78,6 @@
             <p class="d-none d-lg-inline">My Cart</p>
           </a>
         </div>
-
-        <ul class="dropdown-menu dropdown-menu-start">
-          <li><a class="dropdown-item" href="#">Best</a></li>
-          <li><a class="dropdown-item" href="#">Special</a></li>
-          <li><a class="dropdown-item" href="#">Latest</a></li>
-        </ul>
       </div>
     </div>
 
@@ -116,7 +107,19 @@
 
     <!-- Checkout details -->
     <div id="checkout-details" class="py-5">
+      <!-- Notification for total cost -->
+
       <div class="container">
+        <div
+          id="notification"
+          style="
+            display: none;
+            justify-content: center;
+            align-items: center;
+            justify-self: center;
+          "
+          class="border border-primary rounded text-primary checkoutnotif"
+        ></div>
         <div id="checkout-items"></div>
         <div
           id="notification-total"
@@ -184,13 +187,6 @@
       </div>
       <div class="mountain"></div>
     </div>
-
-    <!-- Notification for total cost -->
-    <div
-      id="notification"
-      style="display: none"
-      class="notification border border-primary rounded text-primary checkoutnotif"
-    ></div>
 
     <script src="js/product.js"></script>
     <script src="js/cart.js"></script>
@@ -266,6 +262,22 @@
           notification.style.display = "block";
         });
       });
+    </script>
+    <script>
+      function showNotification() {
+        const notification = document.getElementById("notification");
+        const checkoutButton = document.querySelector(".checkout");
+        notification.style.display = "block";
+        checkoutButton.style.display = "none";
+      }
+
+      // Function to hide notification and show checkout button
+      function hideNotification() {
+        const notification = document.getElementById("notification");
+        const checkoutButton = document.querySelector(".checkout");
+        notification.style.display = "none";
+        checkoutButton.style.display = "block";
+      }
     </script>
   </body>
 </html>

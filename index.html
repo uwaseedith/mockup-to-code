@@ -54,16 +54,13 @@
           placeholder="Search"
           aria-label="Text input with dropdown button"
         />
-        <button
-          class="btn btn-outline-secondary dropdown-toggle"
-          type="button"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          All type
-        </button>
-        <button title="Search" class="btn btn-primary d-none d-lg-block">
-          <i class="fa-solid fa-magnifying-glass rounded d-none d-lg-block"></i>
+        <button title="Search" class="btn btn-primary d-lg-block">
+          <a href="#products" class="rounded d-lg-block"
+            ><i
+              class="fa-solid fa-magnifying-glass rounded d-lg-block"
+              style="color: white"
+            ></i
+          ></a>
         </button>
 
         <div class="ms-md-5 mt-2 mt-md-0">
@@ -92,17 +89,30 @@
             <p class="d-none d-lg-inline">My Cart</p>
           </a>
         </div>
-
-        <ul class="dropdown-menu dropdown-menu-start">
-          <li><a class="dropdown-item" href="#">Latest</a></li>
-          <li><a class="dropdown-item" href="#">Hot deals</a></li>
-          <li><a class="dropdown-item" href="#">Gift boxes</a></li>
-        </ul>
       </div>
     </div>
-    <!--Container div!-->
-    <hr />
+    <br />
 
+    <!-- Content --->
+
+    <div class="hero d-flex" id="hero">
+      <div class="container py-5 text-dark">
+        <h1 class="display-1">
+          Best products &<br />
+          Brands in our store
+        </h1>
+        <p class="lead">Trendy Products, Factory Prices, Excellent Service</p>
+        <a
+          id="shop-btn"
+          href="#products"
+          role="button"
+          class="btn btn-warning fs-5 text-dark animate"
+          >Shop now</a
+        >
+      </div>
+    </div>
+
+    <!--   Product section   -->
     <!--  Navbar  -->
     <div class="container mt-3">
       <nav class="navbar navbar-expand-lg navbar-light">
@@ -124,22 +134,42 @@
               <a class="nav-link active bold" aria-current="page" href="#"
                 >Categories</a
               >
-              <ul style="list-style: none; display: flex; gap: 20px;">
+              <ul style="list-style: none; gap: 20px" class="category-list">
                 <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="#"
+                  <a
+                    class="nav-link"
+                    aria-current="page"
+                    href="#products"
+                    data-category="all"
                     >All</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="#"
-                    >Electronics</a
+                  <a
+                    class="nav-link"
+                    aria-current="page"
+                    href="#products"
+                    data-category="electronic"
+                    >Electronic</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="#">Clothing</a>
+                  <a
+                    class="nav-link"
+                    aria-current="page"
+                    href="#products"
+                    data-category="clothing"
+                    >Clothing</a
+                  >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="#">Furniture</a>
+                  <a
+                    class="nav-link"
+                    aria-current="page"
+                    href="#products"
+                    data-category="furniture"
+                    >Furniture</a
+                  >
                 </li>
               </ul>
             </li>
@@ -147,35 +177,10 @@
         </div>
       </nav>
     </div>
-
-    <!-- Content --->
-
-    <div class="bg-primary py-5">
-      <div class="container py-5 text-light">
-        <h1 class="display-1">
-          Best products &<br />
-          Brands in our store
-        </h1>
-        <p class="lead">Trendy Products, Factory Prices, Excellent Service</p>
-        <a
-          id="shop-btn"
-          href="#"
-          role="button"
-          class="btn btn-warning fs-5 text-light"
-          >Shop now</a
-        >
-        <a href="#" role="button" class="btn btn-light text-dark fs-5"
-          >Learn more</a
-        >
-      </div>
-    </div>
-
-    <!--   Product section   -->
-
     <div class="py-5">
-      <div class="container">
+      <div class="container" id="products">
         <h3 class="fw-bold mb-sm-3 mb-md-5 text-center text-md-start">
-          New products
+          Products
         </h3>
 
         <div
@@ -332,6 +337,8 @@
       </div>
       <div class="mountain"></div>
     </div>
+    <script src="./js/category.js"></script>
+    <script src="./js/search.js"></script>
     <script src="./js/product.js"></script>
   </body>
 </html>

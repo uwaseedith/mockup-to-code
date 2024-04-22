@@ -42,16 +42,13 @@
           placeholder="Search"
           aria-label="Text input with dropdown button"
         />
-        <button
-          class="btn btn-outline-secondary dropdown-toggle"
-          type="button"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          All type
-        </button>
-        <button title="Search" class="btn btn-primary d-none d-lg-block">
-          <i class="fa-solid fa-magnifying-glass rounded d-none d-lg-block"></i>
+        <button title="Search" class="btn btn-primary d-lg-block">
+          <a href="#products" class="rounded d-lg-block"
+            ><i
+              class="fa-solid fa-magnifying-glass rounded d-lg-block"
+              style="color: white"
+            ></i
+          ></a>
         </button>
 
         <div class="ms-md-5 mt-2 mt-md-0">
@@ -77,18 +74,11 @@
             href="/cart.html"
           >
             <i class="fa-solid fa-cart-shopping me-lg-2"></i>
-            <p class="d-none d-lg-inline">My Cart</p></a
-          >
+            <p class="d-none d-lg-inline">My Cart</p>
+          </a>
         </div>
-
-        <ul class="dropdown-menu dropdown-menu-start">
-          <li><a class="dropdown-item" href="#">Best</a></li>
-          <li><a class="dropdown-item" href="#">Special</a></li>
-          <li><a class="dropdown-item" href="#">Latest</a></li>
-        </ul>
       </div>
     </div>
-    <!--Container div!-->
     <hr />
 
     <div class="py-5">
@@ -152,11 +142,10 @@
                 </p>
               </div>
             </div>
-
           </div>
           <!--row idv--->
         </div>
-      </div> 
+      </div>
     </div>
 
     <!-- Footer -->
@@ -210,6 +199,8 @@
             </div>
           </div>
         </div>
+        <div id="wishlist-notif"></div>
+
         <!--row div-->
       </div>
       <div class="mountain"></div>

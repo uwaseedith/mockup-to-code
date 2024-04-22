@@ -1,9 +1,9 @@
 const products = [
     {
         id: 0,
-        cat: "electronic",
-        title: "Smart TV 55'' 4K Ultra HD",
-        price: "999",
+        category: "clothing",
+        title: "Back pack",
+        price: "99",
         color: "Black",
         image: './img/blue bag.jpg',
         deal: "Hot Deal",
@@ -11,156 +11,155 @@ const products = [
     },
     {
         id: 1,
-        cat: "clothing",
+        category: "clothing",
         title: "Men's Casual Jacket",
-        price: "80",
+        price: "100",
         color: "Navy Blue",
-        image: './img/iphone12.jpg',
+        image: 'https://www.houseoffraser.co.uk/images/imgzoom/60/60836703_xxl.jpg',
         deal: "",
         date: "Average"
     },
     {
         id: 2,
-        cat: "furniture",
-        title: "Modern Coffee Table",
-        price: "350",
-        color: "White",
-        image: './img/watch.jpg',
+        category: "electronic ",
+        title: "Iphone12",
+        price: "850",
+        color: "Black",
+        image: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-iphone-12-black-2020?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1635202741000',
         deal: "Hot Deal",
         date: "New"
     },
     {
         id: 3,
-        cat: "electronic",
-        title: "Wireless Bluetooth Earbuds",
-        price: "50",
-        color: "Red",
-        image: './img/Xiaomi.jpg',
+        category: "electronic",
+        title: "Apple watch",
+        price: "250",
+        color: ["Navy Blue", "Orange"],
+        image: 'https://www.apple.com/newsroom/images/product/watch/standard/Apple_watch-series7-availability_hero_10052021_big.jpg.large.jpg',
         deal: "",
         date: "Average"
     },
     {
         id: 4,
-        cat: "clothing",
-        title: "Women's Running Shoes",
-        price: "60",
-        color: "Pink",
-        image: './img/headset.jpg',
+        category: "eletronic",
+        title: "Samsung S24 Ultra",
+        price: "1000",
+        color: "Silver",
+        image: 'https://cdn.dxomark.com/wp-content/uploads/medias/post-165263/Samsung-Galaxy-S24-Ultra_A_featured-image-packshot-review.jpg',
         deal: "Hot Deal",
         date: "New"
     },
     {
         id: 5,
-        cat: "electronic",
-        title: "Portable Power Bank 20000mAh",
-        price: "30",
+        category: "electronic",
+        title: "JBL Flip 6 Portable Waterproof Speaker",
+        price: "25",
         color: "Black",
-        image: './img/gopro.jpg',
+        image: 'https://i5.walmartimages.com/seo/JBL-Flip-6-Portable-Waterproof-Speaker-Black_39f26432-b1be-424a-a03e-4e45c2f9f13b.9daa9454d86006a80702baff2d8af3d3.jpeg',
         deal: "",
         date: "Average"
     },
     {
         id: 6,
-        cat: "furniture",
+        category: "furniture",
         title: "Rustic Wooden Bookshelf",
         price: "200",
         color: "Brown",
-        image: './img/Xiaomi.jpg',
+        image: 'https://fourcornerfurniture.com/wp/wp-content/uploads/2018/08/Rustic-Wooden-Bookshelf-1.jpg',
         deal: "Hot Deal",
         date: "New"
     },
     {
         id: 7,
-        cat: "electronic",
+        category: "electronic",
         title: "Wireless Gaming Mouse",
         price: "70",
         color: "RGB",
-        image: "./img/headset.jpg",
+        image: "https://m.media-amazon.com/images/I/61gm1v-ts8L.jpg",
         deal: "",
         date: "Average"
     },
     {
         id: 8,
-        cat: "clothing",
+        category: "clothing",
         title: "Women's Yoga Pants",
         price: "25",
         color: "Purple",
-        image: './img/gopro.jpg',
+        image: 'https://pineappleclothing.com/cdn/shop/products/Magenta-UV-50_-Lucy-Purple-Performance-Leggings-Yoga-Pants---Women-WL1-MG-back_1024x1024.jpg?v=1589446043',
         deal: "Hot Deal",
         date: "New"
     },
     {
         id: 9,
-        cat: "furniture",
+        category: "furniture",
         title: "Adjustable Standing Desk",
         price: "400",
         color: "Black",
-        image: './img/blue bag.jpg',
+        image: 'https://media.officedepot.com/images/f_auto,q_auto,e_sharpen,h_450/products/3883611/3883611_o01_072423/3883611',
         deal: "",
         date: "Average"
     },
     {
         id: 10,
-        cat: "clothing",
+        category: "clothing",
         title: "Men's Graphic T-Shirt",
         price: "15",
-        color: "Grey",
-        image: './img/watch.jpg',
+        color: "Black",
+        image: 'https://target.scene7.com/is/image/Target/GUEST_0b9a4181-87e7-49f7-a0cd-7cd31d36d9b3?wid=488&hei=488&fmt=pjpeg',
         deal: "Hot Deal",
         date: "New"
     },
     {
         id: 11,
-        cat: "electronic",
+        category: "electronic",
         title: "Wireless Charging Pad",
-        price: "20",
+        price: "400",
         color: "White",
-        image: './img/iphone12.jpg',
+        image: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/HPU82?wid=1144&hei=1144&fmt=jpeg&qlt=95&.v=1636763814000',
         deal: "",
         date: "Average"
     },
     {
         id: 12,
-        cat: "furniture",
+        category: "furniture",
         title: "Velvet Accent Chair",
-        price: "180",
+        price: "1800",
         color: "Burgundy",
-        image: './img/camera.jpg',
+        image: 'https://target.scene7.com/is/image/Target/GUEST_c63b6e24-fa7e-42d2-989e-383cc1b5d4a2?wid=488&hei=488&fmt=pjpeg',
         deal: "Hot Deal",
         date: "New"
     },
     {
         id: 13,
-        cat: "electronic",
+        category: "electronic",
         title: "Noise Cancelling Headphones",
         price: "150",
-        color: "Silver",
-        image: './img/headset.jpg',
+        color: "Green",
+        image: 'https://m.media-amazon.com/images/I/61BSI1YZqAL.jpg',
         deal: "",
         date: "Average"
     },
     {
         id: 14,
-        cat: "clothing",
+        category: "clothing",
         title: "Women's Denim Shorts",
         price: "35",
         color: "Light Blue",
-        image: './img/blue bag.jpg',
+        image: 'https://assets.vogue.com/photos/649e04ea7ccc5800cdc35017/3:4/w_748%2Cc_limit/slide_18.jpg',
         deal: "Hot Deal",
         date: "New"
     },
     {
         id: 15,
-        cat: "furniture",
+        category: "furniture",
         title: "Mid-Century Modern Sofa",
         price: "700",
         color: "Grey",
-        image: './img/camera.jpg',
+        image: 'https://target.scene7.com/is/image/Target/GUEST_c304bd74-0fbf-4fe0-9cef-3d241f28b9a5?wid=488&hei=488&fmt=pjpeg',
         deal: "",
         date: "Average"
     },
 ];
-
 
 // Get a reference to the product container
 const productContainer = document.getElementById("product-container");
@@ -186,7 +185,7 @@ function renderProducts() {
                     <a role="button" id="cart-button-${product.id}" class="btn card-link py-2 px-4 btncart" onclick="handleCartAction(${product.id})" >
                         <span id="cart-button-text-${product.id}">${isProductInCart(product.id) ? 'Remove from Cart' : 'Add to Cart'}</span>
                     </a>                    
-                    <a title="Add to wishlist" id="wishlist-button-${product.id}" class="btn card-link btnlike" onclick="handleWishlistAction(${product.id}) style="border: none;"> 
+                    <a title="Add to wishlist" id="wishlist-button-${product.id}" class="btn card-link btnlike" onclick="handleWishlistAction(${product.id})" style="border: none;"> 
                     <i class="fa-solid fa-heart fsolid"></i></a>
                 </div>
             </div>
@@ -297,8 +296,8 @@ function handleCartAction(productId) {
 
 
 function isProductInWishlist(productId) {
-    const wishlistData = JSON.parse(localStorage.getItem('cart')) || [];
-    constproductInWishlist = wishlistData.find(item => item.id === productId);
+    const wishlistData = JSON.parse(localStorage.getItem('wishlist')) || [];
+    const productInWishlist = wishlistData.find(item => item.id === productId);
 
     return productInWishlist ? true : false;
 }

@@ -1,176 +1,245 @@
 * {
-    padding: 0;
-    margin: 0;
-    font-family: arial;
-    scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+  font-family: arial;
+  scroll-behavior: smooth;
 }
 
 /* footer link */
-.col-6>a {
-    display: block;
+.col-6 > a {
+  display: block;
 }
 
 /* shop now btn */
 
 #shop-btn {
-    background-color: #ff8100;
+  background-color: #ff8100;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#shop-btn {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+#shop-btn {
+  animation: pulse 2s infinite;
+  /* Adjust the animation duration as needed */
 }
 
 /* width of every cards on product section */
 #card-width {
-    width: 18rem;
+  width: 18rem;
 }
-
 
 /* categories nav link */
 
 .nav-item .nav-link {
-    font-size: 20px;
+  font-size: 20px;
 }
 
+.category-list {
+  display: flex;
+}
+
+@media (max-width: 1000px) {
+  .category-list {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* hero-section*/
+
+.hero {
+  background-image: url("https://img.freepik.com/photos-gratuite/assortiment-elements-du-vendredi-noir_23-2149074076.jpg?t=st=1713734782~exp=1713738382~hmac=fa1428eb8f4a343858a8ab0442a9d93dd7f510ef6cad1614251bf771558a754e&w=1380");
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+  justify-content: center;
+}
 
 /* product container */
 
 #product-container {
-    gap: 30px;
+  gap: 30px;
 }
 
 .fsolid {
-    color: #ff8100;
+  color: #ff8100;
 }
 
 .btnlike {
-    border: 1px solid #ff8100 !important;
+  border: 1px solid #ff8100 !important;
 }
 
-.btnlike:hover{
-    background-color: #ff8100 !important;
-    opacity: 0.8;
+.btnlike:hover {
+  background-color: #ff8100 !important;
+  opacity: 0.8;
 }
 
 .btnlike:hover .fa-heart {
-    color: white;
+  color: white;
 }
 
 .btncart {
-    background-color: #ff8100 !important;
-    border: none;
+  background-color: #ff8100 !important;
+  border: none;
 }
 
-.btncart:hover{
-    opacity: 0.8;
+.btncart:hover {
+  opacity: 0.8;
 }
 
 @media (max-width: 768.98px) {
-    #input-form {
-        width: 35%;
-    }
+  #input-form {
+    width: 35%;
+  }
 }
-
-
 
 /* responsive blog post. modify the width of image in each breakpoints */
 
 @media (min-width: 768px) {
-    .bg {
-        width: 350px;
-    }
+  .bg {
+    width: 350px;
+  }
 }
 
 @media (min-width: 992px) {
-    .bg {
-        width: 230px;
-
-    }
+  .bg {
+    width: 230px;
+  }
 }
 
 @media (min-width: 1200px) {
-    .bg {
-        width: 250px;
-    }
+  .bg {
+    width: 250px;
+  }
 }
 
 @media (max-width: 768px) {
-    .bg {
-        width: 250px;
-    }
+  .bg {
+    width: 250px;
+  }
 }
 
 @media (max-width: 578px) {
-    .bg {
-        width: 100%;
-    }
+  .bg {
+    width: 100%;
+  }
 }
 
 /* notification */
 
 .notification {
-    background-color: white;
-    border-radius: 20px;
-    padding: 10px 20px;
-    max-width: fit-content;
-    margin-bottom: 10px;
-    font-size: 14px;
-    justify-self: center;
-    position: fixed;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1000;
-    text-align: center;
-    color: blue;
-    font-weight: bold;
-    opacity: 0.95;
+  background-color: white;
+  border-radius: 20px;
+  padding: 10px 20px;
+  max-width: fit-content;
+  margin-bottom: 10px;
+  font-size: 14px;
+  justify-self: center;
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  text-align: center;
+  color: blue;
+  font-weight: bold;
+  opacity: 0.95;
 }
 
 /*checkout */
 
 .checkout {
-    background-color: white;
-    border-radius: 20px;
-    padding: 10px 20px;
-    width: 100% ;
-    margin-bottom: 10px;
-    left: 50%;
-    font-size: 14px;
-    justify-self: center;
-    align-items: center;
-    z-index: 1000;
-    text-align: center;
-    font-weight: bold;
-    justify-content: center;
-    display: flex;
+  background-color: white;
+  border-radius: 20px;
+  padding: 10px 20px;
+  width: 100%;
+  margin-bottom: 10px;
+  left: 50%;
+  font-size: 14px;
+  justify-self: center;
+  align-items: center;
+  z-index: 1000;
+  text-align: center;
+  font-weight: bold;
+  justify-content: center;
+  display: flex;
 }
 
 .checkout:hover {
-    border: 1px solid white;
-    background-color: rgb(35, 94, 242);
-    color: white !important;
+  border: 1px solid white;
+  background-color: rgb(35, 94, 242);
+  color: white !important;
 }
 
 .checkoutnotif {
- top: 50%;
+  background-color: white;
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  justify-self: center;
+  z-index: 1000;
+  text-align: center;
+  color: blue;
+  font-weight: bold;
+  opacity: 0.95;
+  width: 100%;
 }
 
 /* Footer */
 
 .footer-container {
-    background-color: #ffffff; /* White background */
-    position: relative; /* Positioning context for mountains */
-    overflow: hidden; /* Hide overflowing mountain shapes */
-    z-index: 1;
-  }
-  
-  /* Mountain shape */
-  .mountain {
-    position: absolute; /* Position mountains relative to footer */
-    bottom: 0; /* Align mountains to bottom of footer */
-    left: 0; /* Align mountains to left of footer */
-    width: 100%; /* Full width */
-    height: 200px; /* Height of mountain shapes */
-    background-color: #ff8100; /* Mountain color */
-    clip-path: polygon(0 100%, 100% 0, 100% 100%); /* Create triangular shape */
-    
-    
-  }
+  background-color: #ffffff;
+  /* White background */
+  position: relative;
+  /* Positioning context for mountains */
+  overflow: hidden;
+  /* Hide overflowing mountain shapes */
+  z-index: 1;
+}
 
+/* Mountain shape */
+.mountain {
+  position: absolute;
+  /* Position mountains relative to footer */
+  bottom: 0;
+  /* Align mountains to bottom of footer */
+  left: 0;
+  /* Align mountains to left of footer */
+  width: 100%;
+  /* Full width */
+  height: 200px;
+  /* Height of mountain shapes */
+  background-color: #ff8100;
+  /* Mountain color */
+  clip-path: polygon(0 100%, 100% 0, 100% 100%);
+  /* Create triangular shape */
+}

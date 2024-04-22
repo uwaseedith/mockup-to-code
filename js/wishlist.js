@@ -34,8 +34,6 @@ function handleWishlistAction(productId) {
 
         //Add product to wishlist
         addToWishlist(product);
-        // update icon style 
-        //will do it later
     } else {
         function removeFromWishlist(productId) {
             // Get the wishlist data from localStorage
@@ -50,13 +48,12 @@ function handleWishlistAction(productId) {
 
                 // Update the wishlist  data in localStorage
                 localStorage.setItem('wishlist', JSON.stringify(wishlistData));
-                console.log('Product Removed from Wishlist')
+                console.log('Product Removed from Wishlist');
             }
         }
 
         // Remove product from wishlist
         removeFromWishlist(product.id);
-        // Update icon style will do it later;
 
     }
 
@@ -90,8 +87,10 @@ function renderWishlistProducts() {
                         <h3 class="card-subtitle mb-2 text-muted">${product.title}</h3>
                         <p class="card-title">Price: $${product.price}</p>
                         <p class="card-subtitle mb-2 text-muted">Color: ${product.color}</p>
-                        <a role="button" id="cart-button-${product.id}" class="btn btn-primary card-link py-2 px-4" onclick="handleCartAction(${product.id})">Remove From Cart</a>
-                        <a title="Add to wishlist" id="wishlist-button-${product.id}" class="btn btn-outline-primary card-link btnlike" onclick="handleWishlistAction(${product.id})"> 
+                        <a role="button" id="cart-button-${product.id}" class="btn card-link py-2 px-4 btncart" onclick="handleCartAction(${product.id})" >
+                        <span id="cart-button-text-${product.id}">${isProductInCart(product.id) ? 'Remove from Cart' : 'Move to Cart'}</span>
+                    </a> 
+                        <a title="Add to wishlist" id="wishlist-button-${product.id}" class="btn card-link btnlike" onclick="handleWishlistAction(${product.id})" style="border: none;"> 
                         <i class="fa-solid fa-heart fsolid"></i></a>
                     </div>
                 </div>
