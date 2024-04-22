@@ -21,7 +21,7 @@ const products = [
     },
     {
         id: 2,
-        category: "electronic ",
+        category: "electronic",
         title: "Iphone12",
         price: "850",
         color: "Black",
@@ -41,7 +41,7 @@ const products = [
     },
     {
         id: 4,
-        category: "eletronic",
+        category: "electronic",
         title: "Samsung S24 Ultra",
         price: "1000",
         color: "Silver",
